@@ -1,4 +1,6 @@
-
+import java.util.ArrayList;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.JSONObject;
 /**
  * Beschreiben Sie hier die Klasse Unveroeffentlich.
  * 
@@ -7,7 +9,7 @@
  */
 public class Unveroeffentlicht extends Literatur
 {
-    public Unveroffentlicht(JSONObject jsonObject) throws Exception 
+    public Unveroeffentlicht(JSONObject jsonObject) throws Exception 
     {
 
         this.autor = (String) jsonObject.get("author");

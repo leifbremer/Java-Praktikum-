@@ -19,7 +19,7 @@ class BuecherListe
     private static final String DefaultFILE = "books.json";
 
     // Instanzvariablen
-    private HashMap<Integer,Buch> buecher;
+    private HashMap<Integer,Literatur> buecher;
     
     private int keyValue =0;
 
@@ -37,22 +37,14 @@ class BuecherListe
      */
     public BuecherListe(String filename) throws Exception
     {
-        buecher = new HashMap<Integer, Buch>();
+        buecher = new HashMap<Integer, Literatur>();
         assert (filename != null && filename.contains(".json"));
         JSONParser parser = new JSONParser();
         JSONArray booksJSON = 
             (JSONArray) parser.parse(new java.io.FileReader(filename));
         for( Object obj: booksJSON){ 
             JSONObject jsonObject = (JSONObject) obj;
-            // following code is bad, replace!S
-            // must delegate book details to book,why?
-            // since changes are made in the book class, e.g. add year etc.
-            // replace by calling constructor Buch(JSONObject obj)!
-            //String autor = (String) jsonObject.get("author");
-            // String titel = (String) jsonObject.get("title");
-            // buecher.add(new Buch(autor, titel));
-            // better code:
-            buecher.put(keyValue++, new Buch(jsonObject));
+            buecher.put(keyValue++, new Literatur(jsonObject));
         }
     }
 
