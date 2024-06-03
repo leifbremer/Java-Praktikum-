@@ -11,6 +11,7 @@ import java.util.Map;
  *
  * @author Wolfgang Renz
  * @version April 2024
+ * der lauch
  */
 class BuecherListe
 {
