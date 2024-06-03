@@ -10,11 +10,11 @@ import org.json.simple.JSONObject;
 class Literatur
 {
     // Exemplarvariablen
-    private String autor;
-    private String titel;
-    private int ausgeliehen;
-    private long jahr;
-    private String comment;
+    protected String autor;
+    protected String titel;
+    protected int ausgeliehen;
+    protected long jahr;
+    protected String comment;
 
     /**
      * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.
