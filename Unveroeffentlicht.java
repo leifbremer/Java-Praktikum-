@@ -1,14 +1,13 @@
 
 /**
- * Beschreiben Sie hier die Klasse Buch.
+ * Beschreiben Sie hier die Klasse Unveroeffentlich.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Buch extends Literatur 
-
+public class Unveroeffentlicht extends Literatur
 {
-    public Buch(JSONObject jsonObject) throws Exception 
+    public Unveroffentlicht(JSONObject jsonObject) throws Exception 
     {
 
         this.autor = (String) jsonObject.get("author");
@@ -18,3 +17,4 @@ public class Buch extends Literatur
 
     }
 }
+

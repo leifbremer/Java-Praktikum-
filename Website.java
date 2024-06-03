@@ -1,14 +1,14 @@
 
 /**
- * Beschreiben Sie hier die Klasse Buch.
+ * Beschreiben Sie hier die Klasse Website.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Buch extends Literatur 
+public class Website extends Literatur
 
 {
-    public Buch(JSONObject jsonObject) throws Exception 
+   public Website(JSONObject jsonObject) throws Exception 
     {
 
         this.autor = (String) jsonObject.get("author");
