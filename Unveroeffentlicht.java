@@ -75,7 +75,7 @@ class Unveroeffentlicht
         this.citekey = (String) jsonObject.get("citekey");
 
     }
-
+    
     /**
      * Methode geliehen
      *
@@ -125,7 +125,7 @@ class Unveroeffentlicht
     public void ausgeben()
     {
         System.out.println("Autor: " + autor + ", Titel: " + titel + ", Anzahl der Leihvörgänge: " + ausgeliehen + 
-            ", Erscheinungsjahr: " + ( (jahr==-1)?"unbekannt":jahr ) + ", Kommentar: " + comment);
+            ", Erscheinungsjahr: " + ( (jahr==-1)?"unbekannt":jahr ) + ", Kommentar: " + comment + "Citekey: " + citekey);
     }
 
     /**
