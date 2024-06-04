@@ -13,10 +13,5 @@ public class Website extends Unveroeffentlicht
    public Website(JSONObject jsonObject) throws Exception 
     {
         super(jsonObject);
-        this.autor = (String) jsonObject.get("author");
-        this.titel = (String) jsonObject.get("title");
-        this.jahr = (Long) jsonObject.get("year");
-        this.comment = (String) jsonObject.get("comment");
-
     }
 }
