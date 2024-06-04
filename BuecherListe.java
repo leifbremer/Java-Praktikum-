@@ -19,7 +19,7 @@ class BuecherListe
     private static final String DefaultFILE = "books.json";
 
     // Instanzvariablen
-    private HashMap<Integer,Literatur> buecher;
+    private HashMap<Integer,Unveroeffentlicht> buecher;
     
     private int keyValue =0;
 
@@ -37,20 +37,20 @@ class BuecherListe
      */
     public BuecherListe(String filename) throws Exception
     {
-        buecher = new HashMap<Integer, Literatur>();
+        buecher = new HashMap<Integer, Unveroeffentlicht>();
         assert (filename != null && filename.contains(".json"));
         JSONParser parser = new JSONParser();
         JSONArray booksJSON = 
             (JSONArray) parser.parse(new java.io.FileReader(filename));
         for( Object obj: booksJSON){ 
             JSONObject jsonObject = (JSONObject) obj;
-            buecher.put(keyValue++, new Literatur(jsonObject));
+            buecher.put(keyValue++, new Unveroeffentlicht(jsonObject));
         }
     }
 
-    public void fuegeBuchHinzu(Buch buch)
+    public void fuegeBuchHinzu(Unveroeffentlicht unveroeffentlicht)
     {
-        buecher.put(keyValue, buch);
+        buecher.put(keyValue, unveroeffentlicht);
     }
 
     public void ausgeben()
