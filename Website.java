@@ -2,19 +2,14 @@ import java.util.ArrayList;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
 /**
- * Beschreiben Sie hier die Klasse Buch.
+ * Beschreiben Sie hier die Klasse Website.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Buch extends Unveroeffentlicht
+public class Website extends Unveroeffentlicht
 {
-    
-    
-    public Buch(JSONObject jsonObject) throws Exception {
-        
+    public Website(JSONObject jsonObject) throws Exception {
         super(jsonObject);
-        
     }
-    
 }
