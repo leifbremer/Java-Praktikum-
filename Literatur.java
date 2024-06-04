@@ -15,6 +15,7 @@ class Literatur
     protected int ausgeliehen;
     protected long jahr;
     protected String comment;
+    protected String citekey;
 
     /**
      * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.

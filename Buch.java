@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
 /**
@@ -7,12 +6,16 @@ import org.json.simple.JSONObject;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Buch extends Literatur 
-
+public class Buch extends Unveroeffentlicht 
 {
+    
+    private String publisher;
+    private String address;
+    private int isbn;
+    
     public Buch(JSONObject jsonObject) throws Exception 
     {
-
+        super(jsonObject);
         this.autor = (String) jsonObject.get("author");
         this.titel = (String) jsonObject.get("title");
         this.jahr = (Long) jsonObject.get("year");
