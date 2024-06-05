@@ -9,12 +9,14 @@ import org.json.simple.JSONObject;
  */
 public class Buch extends Unveroeffentlicht
 {
-    
+    private String publisher;
+    private String address;
+    private String isbn;
     
     public Buch(JSONObject jsonObject) throws Exception {
-        
         super(jsonObject);
-        
+        this.publisher = (String) jsonObject.get("publisher");
+        this.address = (String) jsonObject.get("address");
+        this.isbn = (String) jsonObject.get("isbn");
     }
-    
 }

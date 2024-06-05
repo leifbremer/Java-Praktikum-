@@ -9,7 +9,10 @@ import org.json.simple.JSONObject;
  */
 public class Website extends Unveroeffentlicht
 {
+    private String howpublished;
+    
     public Website(JSONObject jsonObject) throws Exception {
         super(jsonObject);
+        this.howpublished = (String) jsonObject.get("howpublished");
     }
 }
