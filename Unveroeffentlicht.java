@@ -124,8 +124,8 @@ class Unveroeffentlicht
      */
     public void ausgeben()
     {
-        System.out.println("Autor: " + autor + ", Titel: " + titel + "\n" + ", Anzahl der Leihvörgänge: " + ausgeliehen + 
-            ", Erscheinungsjahr: " + ( (jahr==-1)?"unbekannt":jahr )+ "\n" + ", Kommentar: " + comment + "Citekey: " + citekey);
+        System.out.println("Autor: " + autor + ", Titel: " + titel + "\n" + "Anzahl der Leihvörgänge: " + ausgeliehen + 
+            ", Erscheinungsjahr: " + ( (jahr==-1)?"unbekannt":jahr )+ "\n" + "Kommentar: " + comment + ", Citekey: " + citekey);
     }
 
     /**
