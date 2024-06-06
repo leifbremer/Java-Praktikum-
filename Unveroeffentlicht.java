@@ -34,13 +34,7 @@ class Unveroeffentlicht
         assert (filename != null && filename.contains(".json"));
         JSONParser parser = new JSONParser();
         JSONObject jsonObject = (JSONObject) parser.parse(new java.io.FileReader(filename));
-
-        this.autor = (String) jsonObject.get("author");
-        this.titel = (String) jsonObject.get("title");
-        this.jahr = (Long) jsonObject.get("year");
-        this.comment = (String) jsonObject.get("comment");
-        this.citekey = (String) jsonObject.get("citekey");
-        
+        fromJsonObject(jsonObject);
     }
 
     /**
@@ -65,15 +59,18 @@ class Unveroeffentlicht
      *
      * @param jsonObject 
      */
-    public Unveroeffentlicht(JSONObject jsonObject) throws Exception 
+    public Unveroeffentlicht(JSONObject jsonObject) throws Exception
     {
-
+        fromJsonObject(jsonObject);
+    }
+    
+    protected void fromJsonObject(JSONObject jsonObject) throws Exception
+    {
         this.autor = (String) jsonObject.get("author");
         this.titel = (String) jsonObject.get("title");
         this.jahr = (Long) jsonObject.get("year");
         this.comment = (String) jsonObject.get("comment");
         this.citekey = (String) jsonObject.get("citekey");
-
     }
     
     /**

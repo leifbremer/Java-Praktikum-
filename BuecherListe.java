@@ -19,7 +19,7 @@ class BuecherListe
     private static final String DefaultFILE = "books.json";
 
     // Instanzvariablen
-    private HashMap<Integer,Unveroeffentlicht> buecher;
+    private HashMap<Integer,Unveroeffentlicht> literatur;
     
     private int keyValue =0;
 
@@ -37,28 +37,40 @@ class BuecherListe
      */
     public BuecherListe(String filename) throws Exception
     {
-        buecher = new HashMap<Integer, Unveroeffentlicht>();
+        literatur = new HashMap<Integer, Unveroeffentlicht>();
         assert (filename != null && filename.contains(".json"));
         JSONParser parser = new JSONParser();
         JSONArray booksJSON = 
             (JSONArray) parser.parse(new java.io.FileReader(filename));
         for( Object obj: booksJSON){ 
             JSONObject jsonObject = (JSONObject) obj;
-            buecher.put(keyValue++, new Unveroeffentlicht(jsonObject));
+            String typ = (String) jsonObject.get("class");
+            switch(typ){
+                case "book":
+                    literatur.put(keyValue++, new Buch(jsonObject));
+                    break;
+                
+                case "unpublished":
+                    literatur.put(keyValue++, new Unveroeffentlicht(jsonObject));
+                    break;
+                    
+                case "misc":
+                    literatur.put(keyValue++, new Website(jsonObject));
+            }
         }
     }
 
-    public void fuegeBuchHinzu(Unveroeffentlicht unveroeffentlicht)
+    public void fuegeBuchHinzu(Buch buch)
     {
-        buecher.put(keyValue, unveroeffentlicht);
+        literatur.put(keyValue, buch);
     }
 
     public void ausgeben()
     {
         System.out.println("Buecherliste:");
-        for(int b: buecher.keySet()){
-            System.out.println(""+b);
-            buecher.get(b).ausgeben();
+        for(int b: literatur.keySet()){
+            System.out.println(""+(b+1));
+            literatur.get(b).ausgeben();
         }
     }
 }

@@ -14,15 +14,16 @@ public class Website extends Unveroeffentlicht
     public Website(String filename) throws Exception
     {
         super(filename);
-        assert (filename != null && filename.contains(".json"));
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject = (JSONObject) parser.parse(new java.io.FileReader(filename));
-
-        this.howpublished = (String) jsonObject.get("howpublished");
     }
     
     public Website(JSONObject jsonObject) throws Exception {
         super(jsonObject);
+    }
+    
+    @Override
+    protected void fromJsonObject(JSONObject jsonObject) throws Exception
+    {
+        super.fromJsonObject(jsonObject);
         this.howpublished = (String) jsonObject.get("howpublished");
     }
     

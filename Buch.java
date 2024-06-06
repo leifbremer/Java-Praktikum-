@@ -12,26 +12,25 @@ public class Buch extends Unveroeffentlicht
     private String publisher;
     private String address;
     private String isbn;
-    
+
     public Buch(String filename) throws Exception
     {
         super(filename);
-        assert (filename != null && filename.contains(".json"));
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject = (JSONObject) parser.parse(new java.io.FileReader(filename));
-
-        this.publisher = (String) jsonObject.get("publisher");
-        this.address = (String) jsonObject.get("address");
-        this.isbn = (String) jsonObject.get("isbn");
     }
-    
+
     public Buch(JSONObject jsonObject) throws Exception {
         super(jsonObject);
+    }
+
+    @Override
+    protected void fromJsonObject(JSONObject jsonObject) throws Exception
+    {
+        super.fromJsonObject(jsonObject);
         this.publisher = (String) jsonObject.get("publisher");
         this.address = (String) jsonObject.get("address");
         this.isbn = (String) jsonObject.get("isbn");
     }
-    
+
     @Override
     public void ausgeben()
     {
