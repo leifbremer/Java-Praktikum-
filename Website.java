@@ -31,6 +31,6 @@ public class Website extends Unveroeffentlicht
     public void ausgeben()
     {
         super.ausgeben();
-        System.out.println("\nLink: "+howpublished);
+        System.out.println("Link: "+howpublished);
     }
 }
