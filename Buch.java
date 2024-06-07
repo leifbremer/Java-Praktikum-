@@ -35,6 +35,6 @@ public class Buch extends Unveroeffentlicht
     public void ausgeben()
     {
         super.ausgeben();
-        System.out.println("Publizist: "+publisher+ ", Addresse: "+address+", ISBN: " +isbn +"\n");
+        System.out.println("Publizist: "+publisher+ ", Addresse: "+address+", ISBN: " +isbn);
     }
 }
