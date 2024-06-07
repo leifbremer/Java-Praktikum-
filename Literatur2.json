@@ -1,0 +1,61 @@
+[
+	{
+		"class": "book",
+		"citekey": "barnes2017",
+		"author": "David J. Barnes and Michale Kölling",
+		"title": "Java lernen mit BlueJ Objects first - Eine Einführung in Java",
+		"publisher": "Pearson Deutschland",
+		"address": "München",
+		"year": 2017,
+		"isbn": "9783868949117",
+		"comment": "Deutsche Übersetzung von Axel Schmolitzki, HAW Hamburg"
+	},
+	{
+		"class": "unpublished",
+		"citekey": "Renz24",
+		"author": "Renz",
+		"title": "OOP Lecture 8 Slide Set",
+		"year": 2024,
+		"comment": "Ergänzung zum Hands-on Training"
+	},
+	{
+		"class": "misc",
+		"citekey": "Paperpile22",
+		"author": "Paperpile",
+		"title": "The 14 BibTeX entry types",
+		"year": 2022,
+		"howpublished": "\\url{https://www.bibtex.com/e/entry-types/}",
+		"comment": "Format für die Literaturliste in LaTeX"
+	},
+	{
+		"class": "book",
+		"citekey": "SchatdesWind",
+		"author": "Carlos Ruiz Zafon",
+		"title": "Der Schatten des Windes",
+		"publisher": "Suhrkamp Verlag",
+		"address": "Barcelona",
+		"year": 2001,
+		"isbn": "123456789",
+		"comment": "In den 50er bis 70er Jahren in Barcelona ist der jugendliche/ junge Erwachsene Daniel Sempere auf der Suche nach einem mysterioesen Autor eines faszinierenden Buches"
+	},
+	{
+		"class": "book",
+		"citekey": "HerrRinge",
+		"author": "J.R.R. Tolkien",
+		"title": "Der Herr der Ringe",
+		"publisher": "Klett-Cotta",
+		"address": "Hobbingen",
+		"year": 1954,
+		"isbn": "987654321",
+		"comment": "In der Fanatasy-Literatur taucht der Leser in die mysteriose Welt der Menschen, Zwergen, Elben, Zauberer, Hobbits, Orks und weitere Fantasiewesen ein. Alles dreht sich um einen Ring, um den einen Ring."
+	},
+	{
+		"class": "misc",
+		"citekey": "ChatGPT",
+		"author": "Sam Altman",
+		"title": "ChatGPT",
+		"year": 2023,
+		"howpublished": "\\url{https://chatgpt.com/}",
+		"comment": "Allwissende KI"
+	}
+]
