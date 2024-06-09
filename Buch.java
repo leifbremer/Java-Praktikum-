@@ -38,7 +38,7 @@ public class Buch extends Unveroeffentlicht
         System.out.println("Publizist: "+publisher+ ", Addresse: "+address+", ISBN: " +isbn);
     }
     
-     @Override
+    @Override
     public String bibString()
     {
         return "@" + "book" + "{" + citekey + ",\n" + 
