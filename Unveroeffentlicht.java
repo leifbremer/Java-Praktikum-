@@ -105,7 +105,7 @@ class Unveroeffentlicht
     
     public String bibString()
     {
-        return "@" + getClass() + "{" + citekey + ",\n" + 
+        return "@" + "unpublished"+ "{" + citekey + ",\n" + 
         "author= \"" + autor + "\",\n" +
         "title= \"" + titel + "\",\n" + 
         "year= \"" + jahr + "\"\n" + "}";

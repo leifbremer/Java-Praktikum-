@@ -41,7 +41,7 @@ public class Buch extends Unveroeffentlicht
      @Override
     public String bibString()
     {
-        return "@" + getClass() + "{" + citekey + ",\n" + 
+        return "@" + "book" + "{" + citekey + ",\n" + 
         "author= \"" + autor + "\",\n" +
         "title= \"" + titel + "\",\n" +
         "publisher = \"" + publisher + "\",\n" +

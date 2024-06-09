@@ -13,10 +13,10 @@ import java.util.Map;
  * @version April 2024
  * der lauch
  */
-class BuecherListe
+class LiteraturListe
 {
     // konstante Klassenvariable, die unabhängig von Instanzen existiert
-    private static final String DefaultFILE = "books.json";
+    private static final String DefaultFILE = "Literatur.json";
 
     // Instanzvariablen
     private HashMap<Integer,Unveroeffentlicht> literatur;
@@ -27,7 +27,7 @@ class BuecherListe
      * default constructor
      * 
      */
-    public BuecherListe() throws Exception
+    public LiteraturListe() throws Exception
     {
         this(DefaultFILE);
     }
@@ -35,7 +35,7 @@ class BuecherListe
     /**
      * constructor by reading booklist from JSON file.
      */
-    public BuecherListe(String filename) throws Exception
+    public LiteraturListe(String filename) throws Exception
     {
         literatur = new HashMap<Integer, Unveroeffentlicht>();
         assert (filename != null && filename.contains(".json"));
@@ -67,7 +67,7 @@ class BuecherListe
 
     public void ausgeben()
     {
-        System.out.println("Buecherliste:");
+        System.out.println("Literaturliste:");
         for(int b: literatur.keySet()){
             System.out.println(""+(b+1));
             literatur.get(b).ausgeben();

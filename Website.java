@@ -37,7 +37,7 @@ public class Website extends Unveroeffentlicht
     @Override
     public String bibString()
     {
-        return "@" + getClass() + "{" + citekey + ",\n" + 
+        return "@" + "misc" + "{" + citekey + ",\n" + 
         "author= \"" + autor + "\",\n" +
         "title= \"" + titel + "\",\n" + 
         "howpublished= \"" + howpublished + "\",\n" + 
