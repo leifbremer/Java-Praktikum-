@@ -33,4 +33,15 @@ public class Website extends Unveroeffentlicht
         super.ausgeben();
         System.out.println("Link: "+howpublished);
     }
+    
+    @Override
+    public String bibString()
+    {
+        return "@" + getClass() + "{" + citekey + ",\n" + 
+        "author= \"" + autor + "\",\n" +
+        "title= \"" + titel + "\",\n" + 
+        "howpublished= \"" + howpublished + "\",\n" + 
+        "year= \"" + jahr + "\",\n" + 
+        "note= \"" + "none" + "\"" + "}";
+    }
 }
