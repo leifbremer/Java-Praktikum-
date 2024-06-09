@@ -63,7 +63,7 @@ class Unveroeffentlicht
     {
         fromJsonObject(jsonObject);
     }
-    
+
     protected void fromJsonObject(JSONObject jsonObject) throws Exception
     {
         this.autor = (String) jsonObject.get("author");
@@ -72,7 +72,7 @@ class Unveroeffentlicht
         this.comment = (String) jsonObject.get("comment");
         this.citekey = (String) jsonObject.get("citekey");
     }
-    
+
     /**
      * Methode geliehen
      *
