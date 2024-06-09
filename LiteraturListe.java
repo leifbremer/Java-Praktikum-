@@ -9,9 +9,8 @@ import java.util.Map;
  * Dies könnte Teil einer größeren Anwendung sein, einer
  * Bibliothekssoftware beispielsweise.
  *
- * @author Wolfgang Renz
+ * @author Leif Bremer, Nicolas Lyer
  * @version April 2024
- * der lauch
  */
 class LiteraturListe
 {
@@ -33,7 +32,7 @@ class LiteraturListe
     }
 
     /**
-     * constructor by reading booklist from JSON file.
+     * constructor by reading literaturelist from JSON file.
      */
     public LiteraturListe(String filename) throws Exception
     {
@@ -60,11 +59,41 @@ class LiteraturListe
         }
     }
 
+    /**
+     * Methode fuegeBuchHinzu
+     *
+     * nimmt Buchobjekt und fügt dieses der Liste hinzu.
+     */
     public void fuegeBuchHinzu(Buch buch)
     {
-        literatur.put(keyValue, buch);
+        literatur.put(keyValue++, buch);
+    }
+    
+    /**
+     * Methode fuegeUnveroeffentlichtHinzu
+     *
+     * nimmt Unveroeffentlichtobjekt und fügt dieses der Liste hinzu.
+     */
+    public void fuegeUnveroeffentlichtHinzu(Unveroeffentlicht unver)
+    {
+        literatur.put(keyValue++, unver);
+    }
+    
+    /**
+     * Methode fuegeWebsiteHinzu
+     *
+     * nimmt Websiteobjekt und fügt dieses der Liste hinzu.
+     */
+    public void fuegeWebsiteHinzu(Website website)
+    {
+        literatur.put(keyValue++, website);
     }
 
+    /**
+     * Methode ausgeben
+     * Gibt alle eingelesenen Literaturen nummeriert in einer Liste
+     * in der Konsole aus
+     */
     public void ausgeben()
     {
         System.out.println("Literaturliste:");

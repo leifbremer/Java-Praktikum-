@@ -29,6 +29,11 @@ class Unveroeffentlicht
 
     }
 
+    /**
+     * Unveroeffentlicht Konstruktor
+     *
+     * Konstruktor list jsonfile mit einem JSONObject
+     */
     public Unveroeffentlicht(String filename) throws Exception
     {
         assert (filename != null && filename.contains(".json"));
@@ -51,7 +56,6 @@ class Unveroeffentlicht
         titel = buchtitel;
         jahr = erscheinungsjahr;
         ausgeliehen = 0;
-
     }
 
     /**
@@ -64,6 +68,11 @@ class Unveroeffentlicht
         fromJsonObject(jsonObject);
     }
 
+    /**
+     * Methode fromJsonObject
+     *
+     * nimmt JSONObject und verarbeitet die gespeicherten Daten
+     */
     protected void fromJsonObject(JSONObject jsonObject) throws Exception
     {
         this.autor = (String) jsonObject.get("author");
@@ -103,6 +112,11 @@ class Unveroeffentlicht
         return autor;
     }
     
+    /**
+     * Methode bibString
+     *
+     * Erstellt einen String im BibTeX Format und gibt diesen zurück
+     */
     public String bibString()
     {
         return "@" + "unpublished"+ "{" + citekey + ",\n" + 
@@ -111,10 +125,13 @@ class Unveroeffentlicht
         "year= \"" + jahr + "\"\n" + "}";
     }
     
+    /**
+     * Methode printBib
+     *  Druckt String im BibTeX Format in der Konsole
+     */
     public void printBib()
     {
       System.out.println(bibString());
-        
     }
     
     /**
