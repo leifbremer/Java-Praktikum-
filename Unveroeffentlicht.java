@@ -5,7 +5,7 @@ import org.json.simple.JSONObject;
 /**
  * Eine Klasse, deren Exemplare Informationen über ein Unveroeffentlicht enthalten.
  * @author (Nicolas Lyer, Leif Bremer)
- * @version (30.04.2024)
+ * @version (09.06.2024)
  */
 class Unveroeffentlicht
 {
