@@ -37,4 +37,15 @@ public class Buch extends Unveroeffentlicht
         super.ausgeben();
         System.out.println("Publizist: "+publisher+ ", Addresse: "+address+", ISBN: " +isbn);
     }
+    
+     @Override
+    public String bibString()
+    {
+        return "@" + getClass() + "{" + citekey + ",\n" + 
+        "author= \"" + autor + "\",\n" +
+        "title= \"" + titel + "\",\n" +
+        "publisher = \"" + publisher + "\",\n" +
+        "address= \"" + address + "\",\n" +
+        "year= \"" + jahr + "\"\n" + "}";
+    }
 }

@@ -10,12 +10,12 @@ import org.json.simple.JSONObject;
 class Unveroeffentlicht
 {
     // Exemplarvariablen
-    private String autor;
-    private String titel;
+    protected String autor;
+    protected String titel;
     private int ausgeliehen;
-    private long jahr;
+    protected long jahr;
     private String comment;
-    private String citekey;
+    protected String citekey;
 
     /**
      * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.
@@ -102,7 +102,21 @@ class Unveroeffentlicht
     {
         return autor;
     }
-
+    
+    public String bibString()
+    {
+        return "@" + getClass() + "{" + citekey + ",\n" + 
+        "author= \"" + autor + "\",\n" +
+        "title= \"" + titel + "\",\n" + 
+        "year= \"" + jahr + "\"\n" + "}";
+    }
+    
+    public void printBib()
+    {
+      System.out.println(bibString());
+        
+    }
+    
     /**
      * Methode gibTitel
      *
